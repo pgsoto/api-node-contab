@@ -9,8 +9,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors())
 
-// app.use(morgan('dev'))
-app.use(morgan(app.get('env') === 'production' ? 'combined' : 'dev'));
+app.use(morgan('dev'))
+// app.use(morgan(app.get('env') === 'production' ? 'combined' : 'dev'));
 
 app.use(require('./routes/index'))
 

@@ -1,10 +1,10 @@
 const app = require('./src/app')
 
-const PORT = process.env.APP_SERVER_PORT || 3000;
+// const PORT = process.env.APP_SERVER_PORT || 8000;
 
 async function main(){
-    await app.listen(PORT || 8000)
-    console.log('Server funciona bien! en puerto: ', PORT)
+    await app.listen(process.env.APP_SERVER_PORT  || 8000)
+    console.log('Server funciona bien! en puerto: ', process.env.APP_SERVER_PORT || 8000)
 }
 
 
